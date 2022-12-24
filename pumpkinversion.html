@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	.image{
+		width:150px;
+		height:150px;
+		background-image:url(blueface.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		display: inline-block;
+	}
+	.image:hover{
+		background-color:pink;
+	}
+
+</style>
+
+</head>
+<body>
+<h3>  So Many Faces: <div id="score"></div></h3>
+<script type="text/javascript">
+	var number = 0;
+	function addImage (){
+		var image = document.createElement("div");
+		document.body.appendChild(image);
+		image.classList.add("image")
+		number = number +1;
+		score.innerText = number;
+	}
+
+	setInterval(addImage, 50)
+</script>
+
+</body>
+</html>
